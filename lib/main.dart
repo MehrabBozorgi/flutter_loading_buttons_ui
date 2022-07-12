@@ -46,76 +46,67 @@ class _FirstScreenState extends State<FirstScreen> {
               ),
               _isLoading == true
                   ? ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _isLoading = false;
-                  });
-                  Future.delayed(
-                      const Duration(seconds: 3),
-                          () {
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.red,
+                      ),
+                      onPressed: () {
                         setState(() {
-                          _isLoading = true;
+                          _isLoading = false;
                         });
-                      }
-                  );
-                },
-                child: const Text('Button2'),
-              )
+                        Future.delayed(const Duration(seconds: 3), () {
+                          setState(() {
+                            _isLoading = true;
+                          });
+                        });
+                      },
+                      child: const Text('Button2'),
+                    )
                   : const SpinKitRotatingCircle(
-                color: Colors.red,
-                size: 50.0,
-              ),
+                      color: Colors.red,
+                      size: 50.0,
+                    ),
               _isLoading == true
                   ? ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _isLoading = false;
-                  });
-                  Future.delayed(
-                      const Duration(seconds: 4),
-                          () {
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.green,
+                      ),
+                      onPressed: () {
                         setState(() {
-                          _isLoading = true;
+                          _isLoading = false;
                         });
-                      }
-                  );
-                },
-                child: const Text('Button3'),
-              )
+                        Future.delayed(const Duration(seconds: 4), () {
+                          setState(() {
+                            _isLoading = true;
+                          });
+                        });
+                      },
+                      child: const Text('Button3'),
+                    )
                   : const SpinKitCircle(
-                color: Colors.green,
-                size: 50.0,
-              ),
+                      color: Colors.green,
+                      size: 50.0,
+                    ),
               _isLoading == true
                   ? ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.yellow,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _isLoading = false;
-                  });
-                  Future.delayed(
-                      const Duration(seconds: 5),
-                          () {
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.yellow,
+                      ),
+                      onPressed: () {
                         setState(() {
-                          _isLoading = true;
+                          _isLoading = false;
                         });
-                      }
-                  );
-                },
-                child: const Text('Button4'),
-              )
+                        Future.delayed(const Duration(seconds: 5), () {
+                          setState(() {
+                            _isLoading = true;
+                          });
+                        });
+                      },
+                      child: const Text('Button4'),
+                    )
                   : const SpinKitFadingFour(
-                color: Colors.yellow,
-                size: 50.0,
-              ),
+                      color: Colors.yellow,
+                      size: 50.0,
+                    ),
             ],
           ),
         ),
